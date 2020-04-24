@@ -3,10 +3,10 @@ Function to convert to Qudadecimal
 
 A Quadadecimal number system is a hypothetical number system
 with base 14. The digits of the number system are 0, 1, 2, 3,
-4, 5, 6, 7, 8, 9, A, B, C, D. A decimal number ‘x’ can be
+4, 5, 6, 7, 8, 9, A, B, C, D. A decimal number â€˜xâ€™ can be
 converted to quadadecimal number by dividing it repeatedly by
 14. The reminders obtained during division put together in
-reverse order form the quadadecimal equivalen of ‘x’. Decimal
+reverse order form the quadadecimal equivalen of â€˜xâ€™. Decimal
 number 82 is converted to its quadadecimal equivalent (5C ) as
 follows:
 
