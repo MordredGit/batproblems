@@ -82,7 +82,6 @@ Output Format
 
 Name of cities in the list
 */
-
 #include<iostream>
 using namespace std;
 #include<string>
@@ -114,32 +113,55 @@ void travel::get()
         string cityi;
         vector<string> connCity;
         int numConnCity;
-        cin>> numConnCity;
+        getline(cin, cityi);
+        cin>> numConnCity; cin.ignore();
         for(int j = 0; j < numConnCity; j++)
         {
             string jcity;
             getline(cin, jcity);
             connCity.push_back(jcity);
         }
-        if(numConnCity > 1) sort(connCity.begin(), connCity.end());
+        if(numConnCity > 1)
+        {
+            sort(connCity.begin(), connCity.end());
+            reverse(connCity.begin(), connCity.end());
+        }
         city_Connection.insert(pair<string,vector<string> >(cityi, connCity));
     }
+    getline(cin,source);
+    getline(cin,destn);
 }
 
 void travel::find_Route()
 {
     string nextCity;
     nextCity = source;
-    while(nextCity == destn)
+    while(nextCity != destn)
     {
         route.push_back(nextCity);
-        auto con = city_Connection.find(source);
+        cout<< nextCity<< endl;
+        auto con = city_Connection.find(nextCity);
+        if(con != city_Connection.end() && (con->second).size() != 0)
+        {
+            vector<string> Con = con->second;
+            string temp = Con.back();
+            Con.pop_back();
+            city_Connection[nextCity] = Con;
+            nextCity = temp;
+        }
+        else
+        {
+            route.pop_back();
+            nextCity = route.back();
+            route.pop_back();
+        }
     }
+    route.push_back(destn);
 }
 
 void travel::print_Route()
 {
-
+    for(auto i = route.begin(); i != route.end(); ++i) cout<< *i << endl;
 }
 
 int main()
@@ -149,3 +171,46 @@ int main()
 	t.find_Route();
 	t.print_Route();
 }
+
+/*
+Test Case:
+
+Input
+4
+A
+3
+B
+C
+D
+B
+1
+E
+E
+2
+G
+F
+F
+1
+H
+A
+G
+Expected output
+A
+B
+E
+G
+
+Point 1
+Point 2
+Point 3
+Point 1
+Point 2
+Point 3
+Point 1
+Point 2
+Point 3
+Point 1
+Point 2
+Point 3
+Point 1
+*/
