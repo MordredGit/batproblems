@@ -1,3 +1,47 @@
+/*
+Insert into a Generic Box
+A generic box has three entry points:
+
+First – Points to the first element in the box
+
+Last - Points to the last element in the box
+
+Mid – Points to the middle element in the box (calculated as (first+last)/2)
+
+Insertion and deletion can be done through all the three points. Initially 
+all the three entry points are -1. All the three entry points are updated 
+for the first element that is inserted into the box. And for other insertions 
+last and mid are updated. For each delete operation, update mid and last entry 
+points. All entry points must become -1 when the box becomes empty. Provide 
+a function to check if the box is full and also a function to check if the 
+box is empty. Define a function print for the generic box. If the box is empty 
+then it must print “Box empty”, print all elements from first position to 
+last otherwise.
+
+Hint: Implement your isfull and isempty as given in the problem description 
+by default there will be a capacity of 10 for the generic box
+
+Input Format:
+
+Choice for type of element (1 for int and 2 for string data)
+
+Choice for operation in generic box
+
+(1- check empty, 2 – is full, 3 – Insert through first entry point, 4 - Insert through last entry point, 5 - Insert through mid entry point
+
+6 – Delete through first entry point, 7 - Delete through last entry point, 8 - Delete through mid entry point, 9 -Print, 10 - Exit
+
+For insert options 3, 4 and 5
+
+Element to be inserted
+
+Output Format:
+
+For options 1 and 2 print 'Empty' or 'Not empty', 'Full' or 'Not full' appropriately
+
+Print elements in the box when print is given
+*/
+
 #include<iostream>
 #include <exception>
 using namespace std;
