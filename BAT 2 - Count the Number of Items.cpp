@@ -12,11 +12,11 @@ predefined class string to check if two strings are same.
 
 Input Format:
 
-Choice of type of input (0- int, 1 – char, 2- book)
+Choice of type of input (0- int, 1 â€“ char, 2- book)
 
-The first line will contain the number of elements ‘n’
+The first line will contain the number of elements â€˜nâ€™
 
-The next ‘n’ lines will contain the details of each element
+The next â€˜nâ€™ lines will contain the details of each element
 
 If the elements are of type book then the order of details are:
 
