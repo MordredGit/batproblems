@@ -1,20 +1,17 @@
 /*
 Arrange Items for Solar Vehicle
-
-There are 'n' bags in a corner of a city and they have
-to be moved to the centre of the city by a solar vehicle.
-The vehicle starts shunting from morning, the vehicle can
-carry more load in the mornings than in the evening when
-sunlight would be dimmer. Given the details of items in
-the bag, sort the bag in descending so that the vehicle
-can safely carry it to the centre of the city. Use vector
+There are 'n' bags in a corner of a city and they have to be moved to the centre
+of the city by a solar vehicle. The vehicle starts shunting from morning, the
+vehicle can carry more load in the mornings than in the evening when sunlight
+would be dimmer. Given the details of items in the bag, sort the bag in descending
+so that the vehicle can safely carry it to the centre of the city. Use vector
 and map in STL. Also use the sort algorithm defined in STL.
 
 
 
-Hint: Use total weight of bag as key and object of bag as value,
-insert total weight of each bag into a vector. Use STL sort
-algorithm to sort it and print the details of bag in order
+Hint: Use total weight of bag as key and object of bag as value, insert total
+weight of each bag into a vector. Use STL sort algorithm to sort it and print
+the details of bag in order
 
 
 
@@ -107,8 +104,8 @@ class solar
 
 void bag::get()
 {
+    cin.ignore();
     cin.getline(name, 30);
-    cin.sync();
     cin>> num_Of_Items;
     for(int i = 0; i < num_Of_Items;i++)
     {
@@ -118,7 +115,7 @@ void bag::get()
 
 void bag::print()
 {
-    cout<< name;
+    cout<< name<< endl;
 }
 
 float bag::compute()
@@ -166,21 +163,3 @@ int main()
 	s.print_In_Order();
 }
 
-/*
-Test case:
-
-2
-abc
-1
-2
-3
-def
-1
-2
-2
-
-Expected:
-
-abc
-def
-*/
