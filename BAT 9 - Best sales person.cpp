@@ -1,7 +1,7 @@
 /*
 Best sales person
 A company stores the name, age and sales made in five cities of their salespersons,
-given the details of ‘n’ employees, write an algorithm and the C program to find the
+given the details of â€˜nâ€™ employees, write an algorithm and the C program to find the
 best sales person. Best sales person is the one who has made maximum sales in the
 company. For example given the details of six salespersons with the following details:
 
@@ -29,7 +29,7 @@ Input Format
 
 First line contains the number of salespersons, n
 
-Next n lines contain the details of ‘n’ salespersons such as name, age and sales made by the salesperson in five cities separated by space
+Next n lines contain the details of â€˜nâ€™ salespersons such as name, age and sales made by the salesperson in five cities separated by space
 */
 #include<iostream>
 #include<string>
