@@ -82,6 +82,8 @@ Output Format
 
 Name of cities in the list
 */
+
+//Pre-included code
 #include<iostream>
 using namespace std;
 #include<string>
@@ -105,6 +107,7 @@ class travel
 	void print_Route();
 };
 
+//My code
 void travel::get()
 {
     cin>> num_Of_Cities; cin.ignore();
@@ -164,6 +167,7 @@ void travel::print_Route()
     for(auto i = route.begin(); i != route.end(); ++i) cout<< *i << endl;
 }
 
+//Pre-included code
 int main()
 {
 	travel t;
@@ -200,17 +204,4 @@ B
 E
 G
 
-Point 1
-Point 2
-Point 3
-Point 1
-Point 2
-Point 3
-Point 1
-Point 2
-Point 3
-Point 1
-Point 2
-Point 3
-Point 1
 */
