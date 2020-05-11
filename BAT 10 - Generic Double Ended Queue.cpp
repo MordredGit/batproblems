@@ -1,3 +1,4 @@
+//There is a problem with exiting in the main function, but since it is pre-included code, I do not wish to change it... 
 /*
 Generic Double Ended Queue
 
@@ -15,11 +16,11 @@ functions to check if a queue is empty, queue is full, enqueue and dequeue.
 
 Enqueue - if queue is not full, increment rear and place the element
 
-dequeue – If queue is not empty, return element pointed by front and increment front
+dequeue â€“ If queue is not empty, return element pointed by front and increment front
 
-isempty – Return true when front is greater than rear or when both are -1
+isempty â€“ Return true when front is greater than rear or when both are -1
 
-isfull – return true when rear is capacity - 1
+isfull â€“ return true when rear is capacity - 1
 
 
 
@@ -29,29 +30,29 @@ front or rear. The operations in a deque are defined as follows:
 
 
 
-push_back – Insert an element at the rear (enqeue in Queue)
+push_back â€“ Insert an element at the rear (enqeue in Queue)
 
-push_front – Insert an element at the front, if queue is not full push all elements
+push_front â€“ Insert an element at the front, if queue is not full push all elements
 forward and place new element, change rear also
 
-pop_back – Remove an element at the rear, if queue is not empty, return element
+pop_back â€“ Remove an element at the rear, if queue is not empty, return element
 pointed by rear and decrement rear
 
-pop_front – Remove an element at the front (dequeue in Queue)
+pop_front â€“ Remove an element at the front (dequeue in Queue)
 
 print - print elements of queue from first to last
 
 Input Format
 
-Choice of queue and data type (1 – integer linear queue, 2 – String deque)
+Choice of queue and data type (1 â€“ integer linear queue, 2 â€“ String deque)
 
 Choice of operation
 
-For queue – 1 – isempty, 2 – isfull, 3 – enqueue, 4 – dequeue, 5 – Print content of queue, 6 - exit
+For queue â€“ 1 â€“ isempty, 2 â€“ isfull, 3 â€“ enqueue, 4 â€“ dequeue, 5 â€“ Print content of queue, 6 - exit
 
 for enqueue option 3, element to be inserted will follow the choice
 
-For deque – 1 – isempty, 2 – isfull, 3 – push_back, 4 – push_front, 5 – pop_back, 6 – pop_front 7 – Print content of deque, 8 - exit
+For deque â€“ 1 â€“ isempty, 2 â€“ isfull, 3 â€“ push_back, 4 â€“ push_front, 5 â€“ pop_back, 6 â€“ pop_front 7 â€“ Print content of deque, 8 - exit
 
 for both the push options 3 and 4, element to be inserted will follow the choice
 
@@ -60,6 +61,7 @@ Output Format
 Print the content of queue after each operation, print elements from first to last
 */
 
+//Pre-included code
 #include<iostream>
 using namespace std;
 #include<string>
@@ -98,7 +100,7 @@ class deque:public queue<T>
 };
 
 
-//Code here
+//My Code here
 template<class T>
 queue<T>::queue(): front(-1), rear(-1), capacity(20)
 {
@@ -211,6 +213,7 @@ T deque<T>::pop_Back()
 }
 
 
+//Pre-included code
 int main()
 {
 	int d_Choice;
