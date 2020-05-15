@@ -142,14 +142,11 @@ void travel::find_Route()
     while(nextCity != destn)
     {
         route.push_back(nextCity);
-        cout<< nextCity<< endl;
-        auto con = city_Connection.find(nextCity);
+        map<string, vector<string>>::iterator con = city_Connection.find(nextCity);
         if(con != city_Connection.end() && (con->second).size() != 0)
         {
-            vector<string> Con = con->second;
-            string temp = Con.back();
-            Con.pop_back();
-            city_Connection[nextCity] = Con;
+            string temp = (con->second).back();
+            (con->second).pop_back();
             nextCity = temp;
         }
         else
